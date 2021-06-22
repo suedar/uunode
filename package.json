@@ -1,6 +1,6 @@
 {
   "name": "uunode",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/suedar/uunode#readme",
   "dependencies": {
-    "yargs-parser": "^20.2.9"
+    "yargs-parser": "^20.2.9",
+    "chalk": "^4.1.1"
   },
   "devDependencies": {
-    "chalk": "^4.1.1"
   }
 }
