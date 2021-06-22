@@ -1,29 +1,30 @@
 {
-  "name": "unode",
+  "name": "uunode",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "bin": {
-    "unode": "index.js"
+    "uunode": "index.js"
   },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "index.js"
+    "start": "node index.js",
+    "compile": "run compile"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suedar/unode.git"
+    "url": "git+https://github.com/suedar/uunode.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/suedar/unode/issues"
+    "url": "https://github.com/suedar/uunode/issues"
   },
-  "homepage": "https://github.com/suedar/unode#readme",
+  "homepage": "https://github.com/suedar/uunode#readme",
   "dependencies": {
     "yargs-parser": "^20.2.9"
   },

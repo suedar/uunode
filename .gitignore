@@ -28,3 +28,5 @@ package-lock.json
 
 package.json.bak
 yarn.lock.bak
+
+.uunode/
