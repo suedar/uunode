@@ -6,13 +6,18 @@
 
 ### 一、概述
 
-`node` 可以运行 `ESM` 吗，自然是可以的，我们需要把文件后缀更改为 `mjs`，然后就可以直接在 `node` 环境运行 `ESM` 了。
+`Node verison 13.2.0` 起开始正式支持 `ES Modules` 特性，有两种方法可以应用：
+1. 在 `package.json` 中设置 `"type": "module"`
+2. 将文件后缀改变为 `mjs`
 
-但是在调试代码的过程中，文件与文件之间往往有很多引用，并且来回改动文件的后缀是很不方便的。
+根据第二个方法，为了便利化调试，我开发了一个命令行工具—— [uunode](https://github.com/suedar/uunode#readme)，它会将 `js`文件自动转化自动转化为 `mjs`,  并执行相应的返回结果。
 
-为了便利化调试，我开发了一个命令行工具—— [uunode](https://github.com/suedar/uunode#readme)，它会将 `js`文件自动转化自动转化为 `mjs`,  并执行相应的返回结果。
+注意：
+1. 若不添加上述两项中任一项，直接在 Node 中使用 ES Modules，则会抛出警告：
 
-
+> Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
+ 
+2. 根据 `ESM` 规范，使用`import` 关键字并不会像 `CommonJS` 模块那样，在默认情况下以文件扩展名填充文件路径。因此，`ES Modules` 必须明确文件扩展名
 
 ###  二、安装
 
@@ -42,8 +47,10 @@ yarn 使用：
 
 ### 四、更多
 
-[手把手教你写Node.js命令行程序](https://juejin.cn/post/6844904095065587725)
+1. [手把手教你写Node.js命令行程序](https://juejin.cn/post/6844904095065587725)
 
-[如何从零开始开发一个 node.js 命令行(cli)工具](https://juejin.cn/post/6883070890130145288#heading-11)
+2. [如何从零开始开发一个 node.js 命令行(cli)工具](https://juejin.cn/post/6883070890130145288#heading-11)
 
-[什么是amd、commonjs、umd、esm?](https://zhuanlan.zhihu.com/p/96718777)
+3. [什么是amd、commonjs、umd、esm?](https://zhuanlan.zhihu.com/p/96718777)
+
+4. [2020年我们可以在Node中使用ES Modules了吗](https://zhuanlan.zhihu.com/p/337796076)
