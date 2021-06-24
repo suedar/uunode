@@ -1,17 +1,17 @@
 {
   "name": "uunode",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "bin": {
-    "uunode": "index.js"
+    "uunode": "bin/index.js"
   },
   "directories": {
     "test": "test"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "node bin/index.js",
     "compile": "run compile"
   },
   "repository": {
