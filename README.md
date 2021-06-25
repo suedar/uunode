@@ -35,8 +35,8 @@
 
 > uunode [example.js]
 
+![2021-06-24_2281841392291411363 33 52](https://user-images.githubusercontent.com/18492953/123364705-80ace000-d5a7-11eb-97d1-fc5ea2378929.gif)
 
-![2021-06-24_2281841392291411363.33.52](/Users/chao.sun/Downloads/2021-06-24_2281841392291411363.33.52.gif)
 
 如示例所示，当我们运行 `uunode [example.js]` 时，它会产生一个 `.uunode` 的文件夹，里面储存着将 `mjs ` 文件（默认不保留文件，你可以加 `-k` 参数保留文件）。并执行 `node .uunode/example.js` 返回相应的结果。
 
