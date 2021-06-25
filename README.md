@@ -16,34 +16,38 @@
 1. 若不添加上述两项中任一项，直接在 Node 中使用 ES Modules，则会抛出警告：
 
 > Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
- 
-2. 根据 `ESM` 规范，使用`import` 关键字并不会像 `CommonJS` 模块那样，在默认情况下以文件扩展名填充文件路径。因此，`ES Modules` 必须明确文件扩展名
 
+2. 根据 `ESM` 规范，使用`import` 关键字并不会像 `CommonJS` 模块那样，在默认情况下以文件扩展名填充文件路径。因此，`ES Modules` 必须明确文件扩展名
 ###  二、安装
 
-npm 使用：
+`npm` 使用：
 
 > npm install uunode -g
 
-yarn 使用：
+`yarn` 使用：
 
 > yarn add uunode -g
+
+(`linux` 显示没有权限的话请在前面加上 sudo, 即 `sudo npm install uunode -g `或者 `sudo yarn add uunode -g`)
 
 
 ### 三、使用示例
 
 > uunode [example.js]
 
-![2021-06-24_2281841392291411363 33 52](https://user-images.githubusercontent.com/18492953/123226893-a504b000-d506-11eb-9186-2d355c024a55.gif)
 
+![2021-06-24_2281841392291411363.33.52](/Users/chao.sun/Downloads/2021-06-24_2281841392291411363.33.52.gif)
+
+如示例所示，当我们运行 `uunode [example.js]` 时，它会产生一个 `.uunode` 的文件夹，里面储存着将 `mjs ` 文件（默认不保留文件，你可以加 `-k` 参数保留文件）。并执行 `node .uunode/example.js` 返回相应的结果。
+
+你还可以使用 `uunode [example.js] -s` 去掉 `console`。
 
 参数支持项：
-|  参数值   | 含义  |
-|  ----  | ----  |
-| -s  | 去除 `console` |
-| -k  | 保留生产后的菜单 |
 
-该 `node` 命令行工具会将 `js` 文件转化为 `mjs`，并找到相应的引用文件，将引用文件转化，并存储在 `.uunode` 文件夹目录下。
+| 参数值 | 含义             |
+| ------ | ---------------- |
+| -s     | 去除 `console`   |
+| -k     | 保留生产后的菜单 |
 
 
 ### 四、更多
